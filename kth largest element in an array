@@ -1,0 +1,21 @@
+class Solution {
+    public int findKthLargest(int[] nums, int k) {
+       
+        //head of the queue approach
+        
+       PriorityQueue<Integer> heap=new PriorityQueue<Integer>();
+        for(int i : nums)
+        {
+            heap.add(i);
+            if(heap.size() > k)
+            {
+                heap.remove();  //removes until size becomes <=k
+            }
+        }
+        
+        return heap.remove();  //shows kth largest element in queue
+        
+       
+        
+    }
+}
