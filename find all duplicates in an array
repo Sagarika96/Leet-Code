@@ -1,0 +1,23 @@
+class Solution {
+    public List<Integer> findDuplicates(int[] nums) {
+        
+     
+        List<Integer> numbers=new ArrayList<Integer>();
+        Arrays.sort(nums);
+        for(int i=0,j=1;i<nums.length && j<nums.length;i++)
+        {
+            if(nums[i]==nums[j])
+            {
+                 numbers.add(nums[i]);
+                j++;
+            }
+            else{
+                j++;
+                
+            }
+        }
+        return numbers;
+        
+        
+    }
+}
