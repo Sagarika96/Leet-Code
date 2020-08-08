@@ -1,0 +1,25 @@
+class Solution {
+    public String removeVowels(String S) {
+        
+  HashSet<Character> vowel=new HashSet<>();
+        
+        vowel.add('a');
+        vowel.add('e');
+        vowel.add('i');
+        vowel.add('o');
+        vowel.add('u');
+        
+        
+        StringBuilder sb=new StringBuilder();
+        
+        for(char c : S.toCharArray())
+        {
+            if(!vowel.contains(c))
+            {
+                
+                sb.append(c);
+            }
+        }
+        return sb.toString();
+    }      
+}
